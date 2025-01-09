@@ -1,0 +1,35 @@
+{% extends 'default_page.html' %}
+{% load static %}
+{% block 'slider' %}
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Sign Up</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<br>
+<center>
+<div  style="height: 400px; width: 500px;  background-color: rgb(152,251,152);" >
+	<center>
+	<h2 style="color:darkred">{{msg1}}</h2>
+	</center>
+	<form action="/signupval" method="post">{% csrf_token %}
+	<br>NAME:<input type ="text" name="na"><br><br>
+	USER ID:<input type ="text" name="ui"><br><br>
+	PASSWORD:<input type ="password" name="pw"><br><br>
+	E-MAIL:<input type ="email" name="em"><br><br>
+	PHONE NUMBER:<input type ="number" name="no"><br><br>
+	<button type="submit" class="btn btn-success">SIGN UP</button>
+	<button type="reset" class="btn btn-success">RESET</button>
+	
+	<br><br>
+</form>
+</div>
+</center>
+
+<br>
+
+{% endblock %}
